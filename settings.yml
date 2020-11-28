@@ -1,0 +1,4 @@
+input: sample.mp4
+output: output.mp4
+time quantum: 15
+fps: 3

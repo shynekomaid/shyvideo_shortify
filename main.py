@@ -11,7 +11,7 @@ if input_cap.isOpened():
     height = int(input_cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     fps = int(input_cap.get(cv2.CAP_PROP_FPS))
     frame_count = int(input_cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    skip_frame = fps * settings["time quantum"]
+    skip_frame = int(fps * settings["time quantum"])
     out = cv2.VideoWriter(settings["output"], cv2.VideoWriter_fourcc(*'mp4v'), settings["fps"], (width, height))
     count = 0
     while input_cap.isOpened():
